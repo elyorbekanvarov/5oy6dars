@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100;200;300;400;500;600;800;900&display=swap");
+:root {
+  --text-color: #111517;
+  --title-color: #ffffff;
+  --primary-color: #ffffff;
+  --bgc-color: rgb(233, 233, 233);
+  --input-color: #848484;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--bgc-color);
+}
+input,
+select {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+.dark {
+  --text-color: #ffffff;
+  --title-color: #111517;
+  --primary-color: #2b3844;
+  --bgc-color: #202c36;
+  --input-color: white;
+}
+.hidden {
+  display: none;
+}
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+header {
+  background-color: var(--title-color);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 2px 4px 0px #0000000e;
+  padding: 23px 80px 24px 81px;
+  h1 {
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--text-color);
+  }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    span {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text-color);
+    }
+  }
+}
+main {
+  padding: 48px 80px 45px 80px;
+  .input-and-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .input {
+      background-color: var(--title-color);
+      box-shadow: 0px 2px 9px 0px #0000000e;
+      padding: 18px 270px 18px 32px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      input::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--input-color);
+        background-color: var(--title-color);
+      }
+    }
+    .filter {
+      padding: 18px 47px 18px 24px;
+      box-shadow: 0px 2px 9px 0px #0000000e;
+      border-radius: 5px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23000' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      background-size: 12px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-color: var(--title-color);
+      color: var(--text-color);
+    }
+  }
+  .cards {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 46px;
+    .card {
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0px 0px 7px 2px #00000008;
+      .card-title {
+        padding: 24px 0px 46px 24px;
+        background-color: var(--title-color);
+        h2 {
+          font-weight: 800;
+          font-size: 18px;
+          color: var(--text-color);
+          margin-bottom: 16px;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-weight: 600;
+          font-size: 14px;
+          color: var(--text-color);
+          p {
+            font-weight: 300;
+            font-size: 14px;
+            color: var(--text-color);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 874px) {
+  .input-and-filter {
+    flex-direction: column;
+    .input {
+      width: 100%;
+    }
+    .filter {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+}
+@media (max-width: 537px) {
+  header {
+    padding: 30px 16px 30px 16px;
+    h1 {
+      font-size: 14px;
+    }
+    a {
+      img {
+        max-width: 16px;
+        height: 16px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+    .input-and-filter {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .input,
+    .filter {
+      width: 100%;
+      padding: 12px;
+    }
+
+    .input input {
+      font-size: 14px;
+    }
+
+    .filter {
+      font-size: 14px;
+    }
+  }
+  main {
+    .cards {
+      .card {
+        .card-img {
+          img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+          }
+        }
+        .card-title {
+          h2 {
+            font-size: 18px;
+          }
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 390px) {
+  .cards {
+    .card {
+      .card-title {
+        padding: 24px 0px 46px 24px !important;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
