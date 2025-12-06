@@ -4,6 +4,8 @@ const SearchBlack = document.querySelector(".search");
 const SearchWhite = document.querySelector(".search-white");
 const searchInput = document.querySelector("input[type='search']");
 const filterSelect = document.getElementById("filter");
+const LightModeText = document.getElementById("light-text");
+const DarkModeText = document.getElementById("dark-text");
 let cards = document.querySelector(".cards");
 MoonEl.addEventListener("click", () => {
   document.body.classList.add("dark");
@@ -11,6 +13,8 @@ MoonEl.addEventListener("click", () => {
   SunEl.classList.remove("hidden");
   SearchBlack.classList.add("hidden");
   SearchWhite.classList.remove("hidden");
+  DarkModeText.classList.add("hidden");
+  LightModeText.classList.remove("hidden");
 });
 SunEl.addEventListener("click", () => {
   document.body.classList.remove("dark");
@@ -18,6 +22,8 @@ SunEl.addEventListener("click", () => {
   MoonEl.classList.remove("hidden");
   SearchWhite.classList.add("hidden");
   SearchBlack.classList.remove("hidden");
+  LightModeText.classList.add("hidden");
+  DarkModeText.classList.remove("hidden");
 });
 let countries = [
   {
